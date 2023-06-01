@@ -11,7 +11,7 @@ class VrionsPlugin extends PluginBase implements Listener{
 
     public function onEnable():void{
         $this->file();
-        $this->getServer()->getCommandMap()->registerAll("cmd", 
+        $this->getServer()->getCommandMap()->registerAll("VrionsPlugin", 
         [new \gamegam\cmd\VCommand()]);
     }
 
