@@ -1,6 +1,6 @@
 <?php
 
-namespace VrionsPlugin\cmd;
+namespace gamegam\cmd;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
