@@ -10,7 +10,7 @@ class VCommand extends Command{
     
     public function __construct(){   
         parent::__construct("virions", "View the list of loaded Vrions", null, ["vr"]);     
-        $this->setPermission("vr.cmd");     
+        $this->setPermission("VrionsPlugin.permission");     
     }
     public function execute(CommandSender $p, string $label, array $args): bool{
         $api = Server::getInstance()->getPluginManager()->getPlugin("VrionsPlugin");
