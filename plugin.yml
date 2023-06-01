@@ -1,5 +1,5 @@
 name: VrionsPlugin
-main: VrionsPlugin\VrionsPlugin
+main: gamegam\VrionsPlugin
 author: gamegam
 version: 0.1
 api: 5.0.0
