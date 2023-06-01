@@ -12,7 +12,7 @@ class VrionsPlugin extends PluginBase implements Listener{
     public function onEnable():void{
         $this->file();
         $this->getServer()->getCommandMap()->registerAll("cmd", 
-        [new \VrionsPlugin\cmd\VCommand()]);
+        [new \gamegam\cmd\VCommand()]);
     }
 
     public function getFiles($type, string $folder, int $int){
