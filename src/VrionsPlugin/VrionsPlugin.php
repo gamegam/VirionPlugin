@@ -51,7 +51,7 @@ class VrionsPlugin extends PluginBase implements Listener{
                 $plugin = $myPluginPath . $folder . "/virion.yml";    
                 if (file_exists($plugin)) {
                     $content = file_get_contents($plugin);
-                    if (strpos($content, 'api: 4.0.0') == false){
+                    if (strpos($content, 'api: 5.0.0') == false){
                         Server::getInstance()->getLogger()->info("§c" . $folder . ": That Vrions is not 4.0.0. ");   
                         return true;
                     } 
