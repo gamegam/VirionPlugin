@@ -11,7 +11,7 @@ class VrionsPlugin extends PluginBase implements Listener{
 
     public function onEnable():void{
         $this->file();
-        $this->getServer()->getCommandMap()->registerAll("cmd", 
+        $this->getServer()->getCommandMap()->registerAll("VrionsPlugin", 
         [new \VrionsPlugin\cmd\VCommand()]);
     }
 
@@ -52,7 +52,7 @@ class VrionsPlugin extends PluginBase implements Listener{
                 if (file_exists($plugin)) {
                     $content = file_get_contents($plugin);
                     if (strpos($content, 'api: 5.0.0') == false){
-                        Server::getInstance()->getLogger()->info("§c" . $folder . ": That Vrions is not 4.0.0. ");   
+                        Server::getInstance()->getLogger()->info("§c" . $folder . ": That Vrions is not 5.0.0. ");   
                         return true;
                     } 
                     $file = $this->getFiles("name", $folder, 4) ?? "(§aName§c is missing.)";
@@ -60,7 +60,7 @@ class VrionsPlugin extends PluginBase implements Listener{
                     $author = $this->getFiles("author", $folder, 6) ?? "(§aAuthor§c is missing.)";
                     $version = $this->getFiles("version", $folder, 7) ?? "(§aVersion§c is missing.)";
                     if ($file === "" || $ab === "" || $author === "" || $version == "" || $version !== "version" || $file !== "name" || $ab !== "antigen" || $author !== "author") {
-                        Server::getInstance()->getLogger()->info("§c" . $folder . "test: The Virion does not contain all or part of [name, antigen, author, version], or has a typo or indentation error.\nError information: {$file}:{$ab}:{$author} :{$version}");
+                        Server::getInstance()->getLogger()->info("§c" . $folder . ": The Virion does not contain all or part of [name, antigen, author, version], or has a typo or indentation error.\nError information: {$file}:{$ab}:{$author} :{$version}");
                     }
                         if (!file_exists($srcPath) || !file_exists($plugin)) {             
                             Server::getInstance()->getLogger()->info("§cPlease remove the {$srcPath}: file or move it elsewhere! Do not put unnecessary folders in virions!");   
