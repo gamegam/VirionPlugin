@@ -5,5 +5,5 @@ version: 0.1
 api: 5.0.0
 
 permissions:
-  vr.cmd:
+  VrionsPlugin.permission:
     default: op
